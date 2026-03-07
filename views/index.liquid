@@ -1,14 +1,25 @@
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-  <meta charset="UTF-8">
-  <title>Instrument beheer</title>
-</head>
-<body>
 
-<h1>Instrumenten overzicht</h1>
+{% render 'partials/header.liquid' %}
+    
+<main>
 
-<p>Welkom op de homepage.</p>
+<section>
+    <h1>Beschikbaar</h1>
+        <ul>
+            <li>Gitaar 1</li>
+            <li>Gitaar 2</li>
+            <li>Gitaar 3</li>
+        </ul>
+</section>
+
+<section>
+    <h1>Uitgeleend</h1>
+        <ul>
+            <li>Basgitaar 1</li>
+            <li>Viool 1</li>
+            <li>Gitaar 4</li>
+        </ul>
+</section>
 
 <h2>Navigatie</h2>
 
@@ -20,5 +31,6 @@
   <li><a href="/instrument/schade">Schade melden</a></li>
 </ul>
 
-</body>
-</html>
+</main>
+
+{% render 'partials/footer.liquid'%}
