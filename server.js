@@ -90,3 +90,7 @@ app.get('/instrument/uitlenen', (request, response) => {
 app.get('/instrument/schade', (request, response) => {
   response.render('instrument-schade')
 })
+
+app.use((req, res) => {
+  res.status(404).render('404')
+})
