@@ -3,31 +3,33 @@
     
 <main>
 
-<section>
-    <h1>Beschikbaar</h1>
-        <ul>
-            <li>Gitaar 1</li>
-            <li>Gitaar 2</li>
-            <li>Gitaar 3</li>
-        </ul>
-</section>
+    <button>
+        Beschikbaar
+    </button>
+    <button>
+        Uitgeleend
+    </button>
+    <button>
+        In reparatie
+    </button>
+    <button>
+        Onbekend
+    </button>
 
 <section>
-    <h1>Uitgeleend</h1>
-        <ul>
-            <li>Basgitaar 1</li>
-            <li>Viool 1</li>
-            <li>Gitaar 4</li>
-        </ul>
+  <ul>
+    {% for instrument in instruments %}
+      <li>
+        {{ instrument.name }}
+      </li>
+    {% endfor %}
+  </ul>
 </section>
 
-<h2>Navigatie</h2>
+
 
 <ul>
   <li><a href="/instrument">Instrument details</a></li>
-  <li><a href="/instrument/toevoegen">Instrument toevoegen</a></li>
-  <li><a href="/instrument/innemen">Instrument innemen</a></li>
-  <li><a href="/instrument/uitlenen">Instrument uitlenen</a></li>
   <li><a href="/instrument/schade">Schade melden</a></li>
 </ul>
 
